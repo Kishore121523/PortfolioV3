@@ -27,13 +27,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #121212;
+  background: #0f0f0f;
   z-index: 10000;
 }
 
 .loader {
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   --duration: 3s;
   width: 44px;
   height: 44px;
@@ -231,7 +231,7 @@
 body {
   width: 100%;
   height: auto;
-  background: #121212;
+  background: #0f0f0f;
   overflow-x: hidden !important;
 }
 
@@ -261,7 +261,7 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   padding: 0.4rem 2rem;
   z-index: 99999;
 }
@@ -279,7 +279,7 @@ nav {
   right: 0;
   top: 0;
   border-left: 1px solid #f4ae95;
-  background: #121212;
+  background: #0f0f0f;
   width: 50%;
   height: 100vh;
   text-transform: uppercase;
@@ -412,7 +412,7 @@ nav .close:hover path {
   align-items: center;
   flex-direction: row;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   padding: 1rem 1.2rem;
   padding-left: 0.9rem;
   border-radius: 10px;
@@ -444,7 +444,7 @@ nav .close:hover path {
   justify-content: center;
   align-items: center;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   padding: 0.8rem 1.8rem;
   border-radius: 10px;
   text-transform: uppercase;
@@ -528,7 +528,7 @@ nav .close:hover path {
   transition: all 300ms ease;
   text-transform: uppercase;
   color: #f4ae95;
-  background: #121212;
+  background: #0f0f0f;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
 }
 #about .wrapper .about-contact button:hover {
@@ -543,7 +543,7 @@ nav .close:hover path {
   padding-top: 2px;
 }
 #about .wrapper .about-contact ul li {
-  background: #121212;
+  background: #0f0f0f;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
   border-radius: 5px;
 }
@@ -568,18 +568,6 @@ nav .close:hover path {
   display: none;
   transition: none;
 }
-#about .avatar {
-  display: block;
-  position: absolute;
-}
-#about .avatar img {
-  display: block;
-  position: relative;
-  top: 30vh;
-  left: 95vh;
-  height: 25vh;
-  z-index: 0;
-}
 #about svg {
   display: none;
   position: absolute;
@@ -595,14 +583,14 @@ nav .close:hover path {
   fill: rgba(54, 54, 54, 0.2);
 }
 #about .cvLink {
-  background: #121212;
+  background: #0f0f0f;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
   border-radius: 5px;
   color: #f4ae95;
   padding: 0.4rem 2rem;
   font-size: 1rem;
   margin-top: 7px;
-  z-index: 90;
+  z-index: 10;
 }
 #about .cvLink:hover {
   color: #d6d4d4;
@@ -659,7 +647,7 @@ nav .close:hover path {
   justify-content: center;
   align-items: center;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   padding: 0.5rem 1rem;
   border-radius: 10px;
 }
@@ -691,7 +679,7 @@ nav .close:hover path {
   width: 100%;
   height: auto;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border-radius: 8px;
   padding: 0.5rem;
   margin: 1.5rem;
@@ -741,7 +729,7 @@ nav .close:hover path {
   z-index: 100;
   transition: all 300ms ease;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   padding: 0.9rem;
   border-radius: 50%;
 }
@@ -758,7 +746,7 @@ nav .close:hover path {
 #work .wrapper .work-content-main .work-cards .card-outer .category {
   position: relative;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   margin-top: -2.22rem;
   border-radius: 6px 6px 0 0;
   padding: 0.3rem 1.7rem;
@@ -841,7 +829,7 @@ nav .close:hover path {
 #skills .wrapper .skills-content .skills-main .skills-logos .skills-img {
   width: 3rem;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border-radius: 50%;
   padding: 8px;
   transition: box-shadow 300ms ease-in-out;
@@ -936,7 +924,7 @@ nav .close:hover path {
 #contact .wrapper .contact-content .contact-head-div .contact-top .contact-phone i {
   color: #f4ae95;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border-radius: 50%;
   padding: 1.2rem;
   font-size: 0.7rem;
@@ -959,7 +947,7 @@ nav .close:hover path {
 #contact .wrapper .contact-content .contact-head-div .contact-top .contact-email i {
   color: #f4ae95;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border-radius: 50%;
   padding: 1.2rem;
   font-size: 0.7rem;
@@ -997,7 +985,7 @@ nav .close:hover path {
   border-radius: 10px;
   padding: 2rem;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   gap: 1rem;
 }
 #contact .wrapper .contact-content .contact-main .contact-form .field-div {
@@ -1015,7 +1003,7 @@ nav .close:hover path {
 #contact .wrapper .contact-content .contact-main .contact-form .field-div input {
   width: 100%;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border-radius: 4px;
   border: 0;
   border-bottom: 2px solid #f4ae95;
@@ -1041,7 +1029,7 @@ nav .close:hover path {
 #contact .wrapper .contact-content .contact-main .contact-form .field-div-textArea textarea {
   width: 100%;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border-radius: 4px;
   border: 0;
   border-bottom: 2px solid #f4ae95;
@@ -1056,7 +1044,7 @@ nav .close:hover path {
   padding: 5px 10px;
   padding-top: 7px;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   color: #d6d4d4;
   border: 0;
   text-align: center;
@@ -1100,7 +1088,7 @@ nav .close:hover path {
 }
 #contact .wrapper .contact-content .contact-bottom .contact-social-media ul li {
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border-radius: 5px;
 }
 #contact .wrapper .contact-content .contact-bottom .contact-social-media ul li a {
@@ -1128,7 +1116,7 @@ nav .close:hover path {
 
 footer {
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   padding: 0.7rem;
   display: flex;
   justify-content: center;
@@ -1166,7 +1154,7 @@ footer p {
   caret-color: #d6d4d4;
   color: #f4ae95;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   border: 0px;
   padding: 5px;
 }
@@ -1199,9 +1187,9 @@ footer p {
   height: fit-content;
   border-radius: 10px;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   transition: all 300ms ease;
-  z-index: 10;
+  z-index: 100;
 }
 
 #overlaySuccess {
@@ -1216,9 +1204,9 @@ footer p {
   height: fit-content;
   border-radius: 10px;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   transition: all 300ms ease;
-  z-index: 10;
+  z-index: 100;
 }
 
 .errorMsg {
@@ -1266,7 +1254,7 @@ footer p {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  z-index: 4;
+  z-index: 1000;
 }
 .modalContainer label,
 .modalContainerContact label {
@@ -1283,7 +1271,7 @@ footer p {
   border-radius: 5px;
   border: none;
   box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-  background: #121212;
+  background: #0f0f0f;
   color: #d6d4d4;
   margin-top: 5px;
   transition: all 300ms ease;
@@ -1326,7 +1314,7 @@ footer p {
   }
   body {
     margin: 0em;
-    background: #121212;
+    background: #0f0f0f;
   }
   header {
     text-align: center;
@@ -1779,13 +1767,13 @@ footer p {
 @media screen and (min-width: 920px) {
   body {
     margin: 0em;
-    background: #121212;
+    background: #0f0f0f;
   }
   .menu {
     display: none;
   }
   header {
-    padding: 0.2rem 6rem;
+    padding: 0.5rem 6rem;
     z-index: 100;
     font-weight: bold;
   }
@@ -1917,16 +1905,18 @@ footer p {
   #about .wrapper .contentAbout .about-content span {
     color: #f4ae95;
   }
-  #about .wrapper .avatar {
-    display: block;
-    position: absolute;
+  #about .wrapper .nameAbout {
+    display: flex;
+    align-items: flex-start;
   }
-  #about .wrapper .avatar img {
+  #about .wrapper .nameAbout .avatar {
     display: block;
-    position: relative;
-    top: 30vh;
-    left: 95vh;
-    height: 25vh;
+    margin-top: -1.5rem;
+  }
+  #about .wrapper .nameAbout .avatar img {
+    display: block;
+    height: 7.5rem;
+    margin-left: 3rem;
     z-index: 0;
   }
   #about .wrapper .about-contact {
@@ -2033,7 +2023,7 @@ footer p {
     justify-content: center;
     align-items: center;
     box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: #121212;
+    background: #0f0f0f;
     padding: 0.6rem 1.5rem;
     border-radius: 10px;
   }
@@ -2063,7 +2053,7 @@ footer p {
     width: 25%;
     height: auto;
     box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: #121212;
+    background: #0f0f0f;
     border-radius: 8px;
     padding: 0.5rem;
     margin: 2rem;
@@ -2113,7 +2103,7 @@ footer p {
     z-index: 100;
     transition: all 300ms ease;
     box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: #121212;
+    background: #0f0f0f;
     padding: 0.8rem;
     border-radius: 50%;
   }
@@ -2130,7 +2120,7 @@ footer p {
   #work .wrapper .work-content-main .work-cards .card-outer .category {
     position: relative;
     box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: #121212;
+    background: #0f0f0f;
     margin-top: -2.23rem;
     border-radius: 6px 6px 0 0;
     padding: 0.3rem 1.7rem;
@@ -2526,7 +2516,7 @@ footer p {
   }
   #contact .wrapper .contact-content .contact-bottom .contact-social-media ul li {
     box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: #121212;
+    background: #0f0f0f;
     border-radius: 5px;
   }
   #contact .wrapper .contact-content .contact-bottom .contact-social-media ul li a {
@@ -2553,7 +2543,7 @@ footer p {
   }
   footer {
     box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: #121212;
+    background: #0f0f0f;
     padding: 0.9rem;
     display: flex;
     justify-content: center;
@@ -2682,6 +2672,16 @@ footer p {
   #about .wrapper .contentAbout .about-content {
     font-size: 1.55rem;
   }
+  #about .wrapper .nameAbout .avatar {
+    display: block;
+    margin-top: -1.5rem;
+  }
+  #about .wrapper .nameAbout .avatar img {
+    display: block;
+    height: 9rem;
+    margin-left: 4rem;
+    z-index: 0;
+  }
   #about .wrapper .about-contact button {
     padding: 10px 2rem;
     font-size: 1.1rem;
@@ -2693,15 +2693,6 @@ footer p {
   #about .wrapper .about-contact ul li a i {
     font-size: 1.2rem;
     padding: 0.4rem 2.7rem;
-  }
-  #about .avatar {
-    display: block;
-  }
-  #about .avatar img {
-    display: block;
-    top: 31vh;
-    left: 92vh;
-    height: 25vh;
   }
   #work .wrapper .work-content-main .work-head {
     font-size: 3.5rem;

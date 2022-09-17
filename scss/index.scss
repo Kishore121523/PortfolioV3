@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-// background: rgba($color: $level2Dark, $alpha: 0.5);
-// backdrop-filter: blur(5px);
 // variables
 $fontBase: "DM Sans",
 sans-serif;
-$backgroundColor: #121212;
+$backgroundColor: #0f0f0f;
 $level1Dark: #1e1e1e;
 $level2Dark: #222222;
 $level3Dark: #363636;
@@ -527,19 +525,6 @@ nav {
             }
         }
     }
-    .avatar {
-        display: block;
-        position: absolute;
-        img {
-            display: block;
-            position: relative;
-            top: 30vh;
-            left: 95vh;
-            height: 25vh;
-            z-index: 0;
-            // transform: rotate(20deg);
-        }
-    }
     svg {
         display: none;
         position: absolute;
@@ -562,7 +547,7 @@ nav {
         padding: 0.4rem 2rem;
         font-size: 1rem;
         margin-top: 7px;
-        z-index: 90;
+        z-index: 10;
         &:hover {
             color: $halfWhite;
         }
@@ -1161,7 +1146,7 @@ footer {
     box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
     background: $backgroundColor;
     transition: all 300ms ease;
-    z-index: 10;
+    z-index: 100;
 }
 
 #overlaySuccess {
@@ -1176,7 +1161,7 @@ footer {
     box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
     background: $backgroundColor;
     transition: all 300ms ease;
-    z-index: 10;
+    z-index: 100;
 }
 
 .errorMsg {
@@ -1222,7 +1207,7 @@ footer {
     flex-direction: column;
     gap: 1rem;
     height: fit-content;
-    z-index: 4;
+    z-index: 1000;
     label {
         color: $peach;
     }
@@ -1769,7 +1754,7 @@ footer {
         display: none;
     }
     header {
-        padding: 0.2rem 6rem;
+        padding: 0.5rem 6rem;
         z-index: 100;
         font-weight: bold;
         a svg {
@@ -1911,17 +1896,18 @@ footer {
                     font-size: 1.2rem;
                 }
             }
-            .avatar {
-                display: block;
-                position: absolute;
-                img {
+            .nameAbout {
+                display: flex;
+                align-items: flex-start;
+                .avatar {
                     display: block;
-                    position: relative;
-                    top: 30vh;
-                    left: 95vh;
-                    height: 25vh;
-                    z-index: 0;
-                    // transform: rotate(20deg);
+                    margin-top: -1.5rem;
+                    img {
+                        display: block;
+                        height: 7.5rem;
+                        margin-left: 3rem;
+                        z-index: 0;
+                    }
                 }
             }
             .about-contact {
@@ -2671,6 +2657,18 @@ footer {
                     font-size: 1.55rem;
                 }
             }
+            .nameAbout {
+                .avatar {
+                    display: block;
+                    margin-top: -1.5rem;
+                    img {
+                        display: block;
+                        height: 9rem;
+                        margin-left: 4rem;
+                        z-index: 0;
+                    }
+                }
+            }
             .about-contact {
                 button {
                     padding: 10px 2rem;
@@ -2688,15 +2686,6 @@ footer {
                         }
                     }
                 }
-            }
-        }
-        .avatar {
-            display: block;
-            img {
-                display: block;
-                top: 31vh;
-                left: 92vh;
-                height: 25vh;
             }
         }
     }
