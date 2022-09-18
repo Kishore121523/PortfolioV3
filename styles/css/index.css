@@ -480,6 +480,7 @@ nav .close:hover path {
   color: #d6d4d4;
 }
 #about .wrapper .contentAbout .about-head-hr {
+  visibility: hidden;
   height: 2px;
   background: #f4ae95;
   border: none;
@@ -510,6 +511,18 @@ nav .close:hover path {
 }
 #about .wrapper .contentAbout .about-content span {
   color: #f4ae95;
+}
+#about .wrapper .nameAbout .avatar {
+  display: block;
+  width: 100vw;
+  margin: 0rem auto;
+  margin-top: -2rem;
+}
+#about .wrapper .nameAbout .avatar img {
+  display: block;
+  height: 10rem;
+  margin: 0rem auto;
+  z-index: 0;
 }
 #about .wrapper .about-contact {
   display: flex;
@@ -1877,6 +1890,7 @@ footer p {
     color: #d6d4d4;
   }
   #about .wrapper .contentAbout .about-head-hr {
+    visibility: visible;
     height: 2px;
     background: #f4ae95;
     border: none;
@@ -2653,6 +2667,7 @@ footer p {
     padding-top: 3.5rem;
   }
   #about .wrapper .contentAbout hr {
+    visibility: visible;
     height: 2px;
     background: #f4ae95;
     border: none;
