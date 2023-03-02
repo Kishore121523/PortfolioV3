@@ -33,6 +33,7 @@ $halfWhite: #d6d4d4;
 }
 
 .app-wrapper {
+    // opacity: 1;
     opacity: 0;
 }
 
@@ -183,11 +184,15 @@ $halfWhite: #d6d4d4;
 }
 
 //Mobile screens
+body,
+html {
+    overflow-x: hidden !important;
+}
+
 body {
     width: 100%;
     height: auto;
     background: $backgroundColor;
-    overflow-x: hidden !important;
 }
 
 body::-webkit-scrollbar {
@@ -213,13 +218,12 @@ a {
 
 header {
     display: flex;
-    position: fixed;
+    position: absolute;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: $backgroundColor;
-    padding: 0.4rem 2rem;
+    background: transparent;
+    padding: 1rem 2rem;
     z-index: 99999;
     a svg {
         height: 2.8rem;
@@ -331,86 +335,52 @@ nav {
     }
 }
 
-.letterAnim {
-    position: absolute;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    justify-content: center;
-    padding-top: 7rem;
-    z-index: 10;
-    #demo-svg {
-        transform: scale(1.4);
-        path {
-            stroke: $halfWhite;
-        }
-    }
-}
-
 #home {
-    background: url("/assets/heroImg3-min.png");
+    background: url("/assets/forestDark.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
-    min-height: 80vh;
+    min-height: 100vh;
     width: 100%;
     color: $halfWhite;
     .nameDiv {
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
+        justify-content: flex-start;
+        align-items: center;
         color: $halfWhite;
-        padding-bottom: 40%;
-        padding-left: 2.2rem;
-        gap: 1rem;
+        min-height: 100vh;
+        padding-top: 38%;
         .nameDiv1 {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
-            box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-            background: $backgroundColor;
+            text-align: center;
             padding: 1rem 1.2rem;
-            padding-left: 0.9rem;
-            border-radius: 10px;
-            gap: 0.8rem;
+            background: rgba( 15, 15, 15, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(24, 24, 24, 0.37);
+            backdrop-filter: blur(8px);
+            border-radius: 25px;
+            -webkit-backdrop-filter: blur( 5px);
+            border: 1px solid rgba(14, 14, 14, 0.18);
+            width: 80%;
             animation: slideIn 2.5s forwards;
-            .waveEmoji img {
-                width: 2.5rem;
-                transform: scaleX(-1);
-                animation: wave 2s infinite;
-            }
             .content {
                 display: flex;
                 flex-direction: column;
                 p {
-                    font-size: 0.75rem;
+                    font-size: 0.9rem;
                 }
                 .name {
                     color: $peach;
-                    font-size: 1.5rem;
+                    font-size: 1.7rem;
                     font-weight: bold;
+                    padding-bottom: 4px;
                 }
-            }
-        }
-        .roleDiv1 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-            background: $backgroundColor;
-            padding: 0.8rem 1.8rem;
-            border-radius: 10px;
-            text-transform: uppercase;
-            gap: 1px;
-            z-index: 1;
-            animation: slideIn 2s forwards;
-            .role {
-                font-size: 0.7rem;
+                .role {
+                    font-size: 0.9rem;
+                }
             }
         }
     }
@@ -427,7 +397,7 @@ nav {
             justify-content: center;
             align-items: center;
             height: 100%;
-            margin: auto 5rem;
+            margin: auto 3rem;
             padding-top: 6rem;
             margin-bottom: 6rem;
             z-index: 1;
@@ -490,21 +460,6 @@ nav {
             flex-direction: column;
             gap: 2rem;
             margin-top: 3rem;
-            button {
-                border-radius: 50px;
-                border-color: transparent;
-                padding: 10px 2rem;
-                font-size: 1rem;
-                transition: all 300ms ease;
-                text-transform: uppercase;
-                color: $peach;
-                background: $backgroundColor;
-                box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-                &:hover {
-                    color: $halfWhite;
-                    cursor: pointer;
-                }
-            }
             ul {
                 display: flex;
                 justify-content: center;
@@ -812,7 +767,7 @@ nav {
                     justify-content: center;
                     align-items: flex-start;
                     padding-left: 2rem;
-                    margin-left: 3rem;
+                    margin-left: 1rem;
                     padding-top: 0.5rem;
                     flex-direction: column;
                     gap: 2rem;
@@ -840,8 +795,14 @@ nav {
 }
 
 #contact {
-    min-height: 100vh;
+    background: url("/assets/contKish3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    min-height: auto;
     width: 100%;
+    background: $backgroundColor;
     .wrapper {
         width: 100%;
         .contact-content {
@@ -849,7 +810,7 @@ nav {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 6rem 0;
+            padding: 3rem 0;
             padding-bottom: 1.5rem;
             height: auto;
             margin: auto 3rem;
@@ -862,6 +823,7 @@ nav {
                 .contact-head {
                     display: flex;
                     flex-direction: column;
+                    order: 1;
                     color: $halfWhite;
                     justify-content: center;
                     width: 100%;
@@ -874,20 +836,22 @@ nav {
                         display: none;
                     }
                 }
+                .contact-logo {
+                    display: none;
+                }
                 .contact-top {
+                    order: 2;
                     width: 100%;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
                     gap: 2rem;
-                    margin-left: 10px;
                     .contact-phone {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        gap: 0.3rem;
                         i {
                             color: $peach;
                             box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
@@ -904,33 +868,6 @@ nav {
                             font-size: 0.6rem;
                         }
                     }
-                    .contact-email {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 0.3rem;
-                        margin-top: 1px;
-                        i {
-                            color: $peach;
-                            box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-                            background: $backgroundColor;
-                            border-radius: 50%;
-                            padding: 1.2rem;
-                            font-size: 0.7rem;
-                        }
-                        .email-head {
-                            font-size: 0.7rem;
-                            color: $peach;
-                        }
-                        .email-content {
-                            font-size: 0.6rem;
-                            transition: color 300ms ease;
-                            &:hover {
-                                color: $peach;
-                            }
-                        }
-                    }
                 }
             }
             .contact-main {
@@ -943,104 +880,44 @@ nav {
                 align-items: center;
                 gap: 2rem;
                 margin-top: 10%;
-                .contact-form {
+                .contactNameDiv1 {
                     display: flex;
-                    color: $halfWhite;
-                    flex-direction: column;
-                    justify-content: flex-start;
+                    justify-content: center;
                     align-items: center;
-                    align-self: center;
-                    width: 100%;
-                    border-radius: 10px;
-                    padding: 2rem;
+                    text-align: center;
+                    padding: 1rem 1.2rem;
                     box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
                     background: $backgroundColor;
-                    gap: 1rem;
-                    .field-div {
+                    border-radius: 25px;
+                    border: 1px solid rgba(14, 14, 14, 0.18);
+                    width: 100%;
+                    animation: slideIn 2.5s forwards;
+                    .contactContent {
                         display: flex;
                         flex-direction: column;
-                        width: 100%;
-                        justify-content: center;
-                        align-items: flex-start;
-                        gap: 1rem;
-                        label {
-                            padding-right: 5rem;
-                            font-size: 0.8rem;
-                        }
-                        input {
-                            width: 100%;
-                            box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-                            background: $backgroundColor;
-                            border-radius: 4px;
-                            border: 0;
-                            border-bottom: 2px solid $peach;
-                            transition: all 300ms ease;
-                            color: $halfWhite;
-                            padding: 5px;
-                            &:focus {
-                                border-bottom: 2px solid $halfWhite;
+                        div {
+                            a {
+                                font-size: 0.8rem;
+                                padding-top: 3px;
+                                transition: all 300ms ease;
+                                color: $halfWhite;
+                                &:hover {
+                                    cursor: pointer;
+                                    color: $peach;
+                                }
+                            }
+                            &:hover {
+                                cursor: pointer;
                             }
                         }
-                    }
-                    .field-div-textArea {
-                        display: flex;
-                        flex-direction: column;
-                        width: 100%;
-                        justify-content: center;
-                        align-items: flex-start;
-                        gap: 1rem;
-                        label {
-                            padding-right: 3.8rem;
-                            font-size: 0.8rem;
-                        }
-                        textarea {
-                            width: 100%;
-                            box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-                            background: $backgroundColor;
-                            border-radius: 4px;
-                            border: 0;
-                            border-bottom: 2px solid $peach;
-                            transition: all 300ms ease;
-                            color: $halfWhite;
-                            padding: 3px;
-                            &:focus {
-                                border-bottom: 2px solid $halfWhite;
-                            }
-                        }
-                    }
-                    .btn-submit {
-                        padding: 5px 10px;
-                        padding-top: 7px;
-                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-                        background: $backgroundColor;
-                        color: $halfWhite;
-                        border: 0;
-                        text-align: center;
-                        align-self: center;
-                        justify-self: center;
-                        width: 40%;
-                        font-size: 0.8rem;
-                        border-radius: 5px;
-                        transition: all 300ms ease;
-                        &:hover {
-                            background: transparent;
+                        .name {
                             color: $peach;
-                            cursor: pointer;
+                            font-size: 1rem;
+                            font-weight: bold;
+                            padding-bottom: 1rem;
                         }
-                    }
-                }
-                .contact-logo {
-                    svg {
-                        position: relative;
-                        right: 0;
-                        height: 25vh;
-                        align-self: center;
-                        z-index: 0;
-                        .kLogo {
-                            fill: transparent;
-                        }
-                        .rect {
-                            fill: transparent;
+                        .role {
+                            font-size: 0.8rem;
                         }
                     }
                 }
@@ -1108,153 +985,6 @@ footer {
 
 /* Modal */
 
-.modal,
-.modalFormSuccess {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-content: center;
-    text-align: center;
-    color: $peach;
-    visibility: visible;
-    opacity: 1;
-    transition: all 5000ms ease;
-    padding: 2rem;
-    input,
-    select,
-    textarea {
-        caret-color: $halfWhite;
-        color: $peach;
-        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-        background: $backgroundColor;
-        border: 0px;
-        padding: 5px;
-    }
-}
-
-.modalFormSuccess {
-    padding: 2rem;
-}
-
-.modal .close-about {
-    align-self: flex-end;
-    margin-bottom: 0.7rem;
-    transition: all 300ms ease;
-    color: $halfWhite;
-    cursor: pointer;
-    &:hover {
-        color: $peach;
-    }
-}
-
-#overlay {
-    opacity: 0;
-    transform: translateX(200%);
-    position: absolute;
-    top: 120vh;
-    margin: 5% 10%;
-    width: 80%;
-    padding: 2rem;
-    height: fit-content;
-    border-radius: 10px;
-    box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: $backgroundColor;
-    transition: all 300ms ease;
-    z-index: 100;
-}
-
-#overlaySuccess {
-    opacity: 0;
-    transform: translateX(200%);
-    position: fixed;
-    top: 45%;
-    margin: 0 0 0% 20%;
-    width: 15rem;
-    height: fit-content;
-    border-radius: 10px;
-    box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: $backgroundColor;
-    transition: all 300ms ease;
-    z-index: 100;
-}
-
-.errorMsg {
-    border-radius: 10px;
-    padding: 2rem;
-    border: 2px solid red;
-}
-
-.successMsg {
-    border-radius: 10px;
-    padding: 2rem;
-    border: 2px solid green;
-}
-
-#tagline {
-    border-radius: 5px;
-    border-color: white;
-    outline: none;
-    padding: 5px 5px;
-    font-size: 0.9rem;
-    width: 90%;
-    justify-self: center;
-    align-self: center;
-    color: $halfWhite;
-}
-
-#note {
-    border-radius: 5px;
-    outline: none;
-    padding: 5px 5px;
-    font-size: 0.9rem;
-    color: $halfWhite;
-    width: 90%;
-    justify-self: center;
-    align-self: center;
-}
-
-.modalContainer,
-.modalContainerContact {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: fit-content;
-    z-index: 1000;
-    label {
-        color: $peach;
-    }
-}
-
-.modalBtn {
-    display: block;
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 0.9rem;
-    padding: 7px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-    background: $backgroundColor;
-    color: $halfWhite;
-    margin-top: 5px;
-    transition: all 300ms ease;
-}
-
-.modalBtn:hover {
-    color: $peach;
-    background: transparent;
-    cursor: pointer;
-}
-
-.modalLabelText {
-    font-size: 1rem;
-    color: $peach;
-}
-
 .cursor1-2,
 .cursor2-2 {
     display: none;
@@ -1265,17 +995,6 @@ footer {
     .cursor1-2,
     .cursor2-2 {
         display: block;
-    }
-    #overlay {
-        top: 110vh;
-        margin: 5% 19%;
-        width: 60%;
-        border-radius: 10px;
-    }
-    #overlaySuccess {
-        top: 45vh;
-        margin: 0 28%;
-        width: 20rem;
     }
     .menu {
         display: none;
@@ -1550,6 +1269,12 @@ footer {
         }
     }
     #contact {
+        background: url("/assets/contKish3.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        min-height: 100vh;
         .wrapper {
             .contact-content {
                 margin: auto 6rem;
@@ -1560,21 +1285,10 @@ footer {
                     flex-direction: column;
                     gap: 2rem;
                     .contact-head {
-                        display: flex;
-                        flex-direction: column;
-                        color: $halfWhite;
-                        justify-content: center;
-                        width: 100%;
-                        p {
-                            font-size: 2.5rem;
-                            font-weight: bold;
-                            text-align: center;
-                        }
-                        .contact-head-hr {
-                            display: none;
-                        }
+                        visibility: hidden;
                     }
                     .contact-top {
+                        order: 2;
                         width: 100%;
                         display: flex;
                         flex-direction: row;
@@ -1600,30 +1314,6 @@ footer {
                                 font-size: 0.7rem;
                             }
                         }
-                        .contact-email {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 0.3rem;
-                            margin-top: 1px;
-                            i {
-                                border-radius: 50%;
-                                padding: 1.2rem;
-                                font-size: 1rem;
-                            }
-                            .email-head {
-                                font-size: 0.7rem;
-                                color: $peach;
-                            }
-                            .email-content {
-                                font-size: 0.7rem;
-                                transition: color 300ms ease;
-                                &:hover {
-                                    color: $peach;
-                                }
-                            }
-                        }
                     }
                 }
                 .contact-main {
@@ -1636,75 +1326,8 @@ footer {
                     align-items: center;
                     gap: 2rem;
                     margin-top: 7%;
-                    .contact-form {
-                        display: flex;
-                        color: $halfWhite;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
-                        align-self: center;
-                        width: 85%;
-                        border-radius: 10px;
-                        padding: 2rem;
-                        gap: 2rem;
-                        .field-div {
-                            display: flex;
-                            flex-direction: column;
-                            width: 100%;
-                            justify-content: space-between;
-                            align-items: flex-start;
-                            gap: 1rem;
-                            label {
-                                padding-right: 5rem;
-                                font-size: 0.8rem;
-                            }
-                            input {
-                                width: 100%;
-                                border-radius: 4px;
-                                border: 0;
-                                border-bottom: 2px solid $peach;
-                                transition: all 300ms ease;
-                                color: $halfWhite;
-                                padding: 5px;
-                                &:focus {
-                                    border-bottom: 2px solid $halfWhite;
-                                }
-                            }
-                        }
-                        .field-div-textArea {
-                            display: flex;
-                            flex-direction: column;
-                            width: 100%;
-                            justify-content: space-between;
-                            align-items: flex-start;
-                            gap: 1rem;
-                            label {
-                                padding-right: 3.8rem;
-                                font-size: 0.8rem;
-                            }
-                            textarea {
-                                width: 100%;
-                                border-radius: 4px;
-                                border: 0;
-                                border-bottom: 2px solid $peach;
-                                transition: all 300ms ease;
-                                color: $halfWhite;
-                                padding: 3px;
-                                &:focus {
-                                    border-bottom: 2px solid $halfWhite;
-                                }
-                            }
-                        }
-                        .btn-submit {
-                            align-self: center;
-                            padding: 5px 15px;
-                            border: 0;
-                            width: 40%;
-                            border-radius: 5px;
-                            transition: all 300ms ease;
-                        }
-                    }
                     .contact-logo {
+                        visibility: hidden;
                         svg {
                             position: relative;
                             right: 0;
@@ -1716,6 +1339,44 @@ footer {
                             }
                             .rect {
                                 fill: transparent;
+                            }
+                        }
+                    }
+                    .contactNameDiv1 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        padding: 1.5rem 1.2rem;
+                        padding-left: 0.9rem;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                        background: $backgroundColor;
+                        border: 1px solid rgba(14, 14, 14, 0.18);
+                        width: 20rem;
+                        animation: slideIn 2.5s forwards;
+                        .contactContent {
+                            display: flex;
+                            flex-direction: column;
+                            div {
+                                a {
+                                    font-size: 1rem;
+                                    padding-top: 3px;
+                                    transition: all 300ms ease;
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: $peach;
+                                    }
+                                }
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            .name {
+                                color: $peach;
+                                font-size: 2rem;
+                                font-weight: bold;
                             }
                         }
                     }
@@ -1769,12 +1430,13 @@ footer {
         display: none;
     }
     header {
-        padding: 0.5rem 6rem;
+        padding: 1.2rem 6rem;
         z-index: 100;
         font-weight: bold;
         a svg {
-            height: 2.6rem;
-            padding-top: 0.9rem;
+            height: 2.5rem;
+            padding-top: 0rem;
+            margin-top: 0.3rem;
         }
     }
     nav {
@@ -1797,7 +1459,7 @@ footer {
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        top: 27%;
+        top: 28%;
         right: 0;
         margin-right: 30px;
         z-index: 9999;
@@ -1813,55 +1475,50 @@ footer {
             }
         }
     }
-    .letterAnim {
-        position: absolute;
-        display: flex;
-        height: auto;
-        width: 100%;
-        justify-content: center;
-        padding-top: 9.3%;
-        z-index: 10;
-        #demo-svg {
-            transform: scale(1.7);
-            .peach {
-                stroke: $peach;
-            }
-            path {
-                stroke: $halfWhite;
-            }
-        }
-    }
     // Home page
     #home {
         min-height: 100vh;
         .nameDiv {
-            padding-left: 8rem;
-            padding-bottom: 0.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: $halfWhite;
+            min-height: 100vh;
+            gap: 1rem;
+            padding-left: 10%;
+            padding-top: 0;
             .nameDiv1 {
-                padding: 1rem 1.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: row;
+                padding: 1.5rem 1.2rem;
                 padding-left: 0.9rem;
-                border-radius: 10px;
-                gap: 0.8rem;
-                margin-bottom: 8rem;
-                .waveEmoji img {
-                    width: 2.8rem;
-                }
+                margin-bottom: 1rem;
+                border-radius: 25px;
+                background: rgba( 15, 15, 15, 0.5);
+                box-shadow: 0 8px 32px 0 rgba(24, 24, 24, 0.37);
+                backdrop-filter: blur(8px);
+                border-radius: 25px;
+                -webkit-backdrop-filter: blur( 5px);
+                border: 1px solid rgba(14, 14, 14, 0.18);
+                width: 28rem;
+                animation: slideIn 2.5s forwards;
                 .content {
+                    display: flex;
+                    flex-direction: column;
                     p {
-                        font-size: 0.8rem;
+                        font-size: 1rem;
                     }
                     .name {
-                        font-size: 2rem;
+                        color: $peach;
+                        font-size: 3rem;
+                        font-weight: bold;
                     }
-                }
-            }
-            .roleDiv1 {
-                padding: 0.8rem 2rem;
-                margin-left: 9rem;
-                margin-bottom: 2.7rem;
-                border-radius: 10px;
-                .role {
-                    font-size: 0.8rem;
+                    .role {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -1921,7 +1578,7 @@ footer {
                     img {
                         display: block;
                         height: 7.5rem;
-                        margin-left: 3rem;
+                        margin-left: 2.3rem;
                         z-index: 0;
                     }
                 }
@@ -1975,8 +1632,10 @@ footer {
             position: absolute;
             right: 0;
             height: 90vh;
-            margin-top: 4.5%;
+            margin-top: 2.5%;
             z-index: 0;
+            overflow: visible;
+            z-index: 10000;
             path {
                 fill: rgba($color: $level3Dark, $alpha: 0.2);
             }
@@ -1997,11 +1656,12 @@ footer {
     #work {
         min-height: 100vh;
         width: 100%;
+        position: relative;
         .wrapper {
             width: 100%;
             height: auto;
             .work-content-main {
-                padding-top: 6rem;
+                padding-top: 3rem;
                 padding-left: 2rem;
                 height: auto;
                 margin: auto 8rem;
@@ -2009,11 +1669,13 @@ footer {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+                z-index: 1;
                 .work-head {
                     color: $halfWhite;
                     align-self: center;
                     font-size: 3rem;
                     font-weight: bold;
+                    z-index: 1;
                     span {
                         color: $peach;
                     }
@@ -2025,6 +1687,7 @@ footer {
                     width: 100%;
                     gap: 2rem;
                     padding-top: 2rem;
+                    z-index: 1;
                     li {
                         display: flex;
                         justify-content: center;
@@ -2162,14 +1825,15 @@ footer {
     #skills {
         min-height: 100vh;
         width: 100%;
+        position: relative;
         .wrapper {
             width: 100%;
             .skills-content {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: flex-end;
-                padding: 6rem 0;
+                align-items: flex-start;
+                padding: 3rem 0;
                 padding-bottom: 2.5rem;
                 padding-left: 2rem;
                 height: auto;
@@ -2188,7 +1852,7 @@ footer {
                         display: block;
                         margin-top: 8px;
                         border: 0px solid $peach;
-                        margin-left: -38%;
+                        margin-left: 38%;
                         background: $peach;
                         border-radius: 5px;
                         z-index: 1;
@@ -2313,30 +1977,51 @@ footer {
                 justify-content: center;
                 align-items: center;
                 padding: 6rem 0;
+                padding-top: 2rem;
                 padding-bottom: 1.5rem;
-                padding-left: 2rem;
+                padding-left: 0rem;
                 height: auto;
-                margin: auto 8rem;
+                margin: auto 9rem;
                 .contact-head-div {
                     display: flex;
                     width: 100%;
-                    justify-content: space-between;
+                    justify-content: center;
+                    align-items: center;
                     flex-direction: row;
+                    .contact-logo {
+                        display: flex;
+                        svg {
+                            position: relative;
+                            right: 0;
+                            height: 10vh;
+                            align-self: flex-start;
+                            z-index: 0;
+                            padding-left: 2rem;
+                            .kLogo {
+                                fill: transparent;
+                            }
+                            .rect {
+                                fill: transparent;
+                            }
+                        }
+                    }
                     .contact-head {
+                        visibility: hidden;
                         display: flex;
                         flex-direction: column;
                         color: $halfWhite;
-                        justify-content: flex-start;
+                        justify-content: center;
                         width: 100%;
                         p {
                             font-size: 3rem;
                             font-weight: bold;
+                            margin-right: auto;
                         }
                         .contact-head-hr {
                             display: block;
                             margin-top: 5px;
                             border: 1px solid $peach;
-                            margin-left: -10%;
+                            margin-left: 25%;
                             background: $peach;
                             border-radius: 5px;
                             z-index: 1;
@@ -2346,15 +2031,17 @@ footer {
                         width: 100%;
                         display: flex;
                         flex-direction: row;
-                        justify-content: flex-end;
+                        justify-content: center;
                         align-items: center;
-                        gap: 4rem;
+                        gap: 0rem;
+                        order: 1;
                         .contact-phone {
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
                             align-items: center;
                             gap: 0.3rem;
+                            margin-left: auto;
                             i {
                                 border-radius: 50%;
                                 padding: 1.2rem;
@@ -2368,30 +2055,6 @@ footer {
                                 font-size: 0.7rem;
                             }
                         }
-                        .contact-email {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 0.3rem;
-                            margin-top: 1px;
-                            i {
-                                border-radius: 50%;
-                                padding: 1.2rem;
-                                font-size: 1rem;
-                            }
-                            .email-head {
-                                font-size: 0.8rem;
-                                color: $peach;
-                            }
-                            .email-content {
-                                font-size: 0.7rem;
-                                transition: color 300ms ease;
-                                &:hover {
-                                    color: $peach;
-                                }
-                            }
-                        }
                     }
                 }
                 .contact-main {
@@ -2399,96 +2062,46 @@ footer {
                     color: $halfWhite;
                     width: 100%;
                     flex-direction: row;
-                    justify-content: center;
-                    align-self: center;
+                    justify-content: space-between;
                     align-items: center;
-                    gap: 8rem;
-                    margin-top: 7%;
-                    .contact-form {
+                    margin-top: 16%;
+                    padding-bottom: 2rem;
+                    margin-left: 1.5rem;
+                    .contactNameDiv1 {
                         display: flex;
-                        color: $halfWhite;
-                        flex-direction: column;
-                        justify-content: flex-start;
+                        justify-content: center;
                         align-items: center;
-                        align-self: center;
-                        width: 100%;
-                        border-radius: 10px;
-                        padding: 2rem;
-                        gap: 2rem;
-                        .field-div {
+                        flex-direction: row;
+                        padding: 1.5rem 1.2rem;
+                        padding-left: 0.9rem;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        box-shadow: -2px -2px 4px rgba(46, 45, 45, 0.4), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
+                        background: $backgroundColor;
+                        border: 1px solid rgba(14, 14, 14, 0.18);
+                        width: 20rem;
+                        animation: slideIn 2.5s forwards;
+                        .contactContent {
                             display: flex;
-                            flex-direction: row;
-                            width: 100%;
-                            justify-content: space-between;
-                            align-items: center;
-                            gap: 2rem;
-                            label {
-                                padding-right: 5rem;
-                            }
-                            input {
-                                width: 50%;
-                                border-radius: 4px;
-                                border: 0;
-                                border-bottom: 2px solid $peach;
-                                transition: all 300ms ease;
-                                color: $halfWhite;
-                                padding: 5px;
-                                &:focus {
-                                    border-bottom: 2px solid $halfWhite;
+                            flex-direction: column;
+                            div {
+                                a {
+                                    font-size: 1rem;
+                                    padding-top: 3px;
+                                    transition: all 300ms ease;
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: $peach;
+                                    }
+                                }
+                                &:hover {
+                                    cursor: pointer;
                                 }
                             }
-                        }
-                        .field-div-textArea {
-                            display: flex;
-                            flex-direction: row;
-                            width: 100%;
-                            justify-content: space-between;
-                            align-items: flex-start;
-                            gap: 2rem;
-                            label {
-                                padding-right: 3.8rem;
-                            }
-                            textarea {
-                                width: 100%;
-                                border-radius: 4px;
-                                border: 0;
-                                border-bottom: 2px solid $peach;
-                                transition: all 300ms ease;
-                                color: $halfWhite;
-                                padding: 3px;
-                                &:focus {
-                                    border-bottom: 2px solid $halfWhite;
-                                }
-                            }
-                        }
-                        .btn-submit {
-                            padding: 5px 15px;
-                            padding-top: 7px;
-                            color: $halfWhite;
-                            border: 0;
-                            width: 40%;
-                            border-radius: 5px;
-                            transition: all 300ms ease;
-                            &:hover {
-                                box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
-                                background: transparent;
+                            .name {
                                 color: $peach;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                    .contact-logo {
-                        svg {
-                            position: relative;
-                            right: 0;
-                            height: 50vh;
-                            align-self: center;
-                            z-index: 0;
-                            .kLogo {
-                                fill: transparent;
-                            }
-                            .rect {
-                                fill: transparent;
+                                font-size: 2rem;
+                                font-weight: bold;
                             }
                         }
                     }
@@ -2496,7 +2109,7 @@ footer {
                 .contact-bottom {
                     display: flex;
                     width: 100%;
-                    margin-top: 1.5rem;
+                    margin-top: 9rem;
                     align-items: center;
                     justify-content: space-between;
                     flex-direction: row;
@@ -2504,7 +2117,7 @@ footer {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        gap: 2rem;
+                        gap: 1rem;
                         li {
                             box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
                             background: $backgroundColor;
@@ -2540,7 +2153,7 @@ footer {
     footer {
         box-shadow: -4px -4px 4px rgba(46, 45, 45, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.4), 0 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 0 rgba(0, 0, 0, 0.4) inset;
         background: $backgroundColor;
-        padding: 0.9rem;
+        padding: 1.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2550,53 +2163,11 @@ footer {
             border-right: 1px solid $halfWhite;
             padding: 0px 1rem;
             font-size: 0.8rem;
+            &:hover {
+                color: $peach;
+                cursor: pointer;
+            }
         }
-    }
-    #overlay {
-        opacity: 0;
-        transform: translateX(200%);
-        position: absolute;
-        top: 110vh;
-        margin: 5% 25%;
-        width: 50%;
-        height: fit-content;
-        border-radius: 10px;
-        transition: all 300ms ease;
-        z-index: 10;
-    }
-    #tagline {
-        border-radius: 5px;
-        border-color: white;
-        outline: none;
-        padding: 5px 5px;
-        font-size: 0.9rem;
-        width: 80%;
-        justify-self: center;
-        align-self: center;
-        color: $halfWhite;
-    }
-    #note {
-        border-radius: 5px;
-        outline: none;
-        padding: 5px 5px;
-        font-size: 0.9rem;
-        color: $halfWhite;
-        width: 80%;
-        justify-self: center;
-        align-self: center;
-    }
-    .modalBtn {
-        display: block;
-        width: 20%;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 0.8rem;
-        padding: 7px;
-        border-radius: 5px;
-    }
-    #overlaySuccess {
-        top: 40%;
-        left: 10%;
     }
 }
 
@@ -2621,27 +2192,29 @@ footer {
     #home {
         min-height: 100vh;
         .nameDiv {
-            padding-left: 9rem;
-            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: $halfWhite;
+            min-height: 100vh;
+            padding-left: 10%;
             .nameDiv1 {
-                margin-bottom: 8.5rem;
-                .waveEmoji img {
-                    width: 3.5rem;
-                }
+                width: 35rem;
+                padding: 1.5rem 1.2rem;
+                padding-left: 0.9rem;
+                margin-bottom: 1rem;
+                border-radius: 25px;
                 .content {
                     p {
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                     }
                     .name {
-                        font-size: 2.8rem;
+                        font-size: 3.5rem;
                     }
-                }
-            }
-            .roleDiv1 {
-                padding: 0.8rem 2rem;
-                margin-bottom: 3rem;
-                .role {
-                    font-size: 0.9rem;
+                    .role {
+                        font-size: 1.2rem;
+                    }
                 }
             }
         }
@@ -2785,11 +2358,20 @@ footer {
                         p {
                             font-size: 3.5rem;
                         }
+                        .contact-head-hr {
+                            margin-left: 15%;
+                        }
+                    }
+                    .contact-logo {
+                        svg {
+                            height: 10vh;
+                        }
                     }
                     .contact-top {
                         gap: 4.5rem;
                         .contact-phone {
                             gap: 0.4rem;
+                            margin-right: 4rem;
                             i {
                                 padding: 1.3rem;
                                 font-size: 1.3rem;
@@ -2801,39 +2383,47 @@ footer {
                                 font-size: 0.7rem;
                             }
                         }
-                        .contact-email {
-                            gap: 0.4rem;
-                            i {
-                                padding: 1.3rem;
-                                font-size: 1.3rem;
-                            }
-                            .email-head {
-                                font-size: 0.9rem;
-                            }
-                            .email-content {
-                                a {
-                                    font-size: 0.7rem;
-                                }
-                            }
-                        }
                     }
                 }
                 .contact-main {
-                    margin-top: 6%;
-                    .contact-form {
-                        gap: 2.5rem;
-                        .btn-submit {
-                            padding: 7px 15px;
-                        }
-                    }
-                    .contact-logo {
-                        svg {
-                            height: 48vh;
+                    margin-top: 17%;
+                    margin-left: 0;
+                    .contactNameDiv1 {
+                        padding: 1.5rem 1.2rem;
+                        padding-left: 0.9rem;
+                        margin-bottom: 1rem;
+                        width: 25rem;
+                        .contactContent {
+                            display: flex;
+                            flex-direction: column;
+                            div {
+                                a {
+                                    font-size: 1.2rem;
+                                    padding-top: 3px;
+                                    transition: all 300ms ease;
+                                    color: $halfWhite;
+                                    &:hover {
+                                        cursor: pointer;
+                                        color: $peach;
+                                    }
+                                }
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            .name {
+                                color: $peach;
+                                font-size: 2rem;
+                                font-weight: bold;
+                            }
+                            .role {
+                                font-size: 1rem;
+                            }
                         }
                     }
                 }
                 .contact-bottom {
-                    margin-top: 2rem;
+                    margin-top: 14%;
                     .contact-social-media ul {
                         gap: 3rem;
                     }
@@ -2846,10 +2436,6 @@ footer {
                 }
             }
         }
-    }
-    #overlaySuccess {
-        top: 40%;
-        left: 40%;
     }
 }
 

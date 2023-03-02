@@ -10,42 +10,6 @@ close.addEventListener("click", () => {
   nav.classList.remove("open-nav");
 });
 
-//Smooth Scroll
-// $(document).ready(function() {
-//     $("header a").on("click", function(event) {
-//         if (this.hash !== "") {
-//             event.preventDefault();
-
-//             var hash = this.hash;
-
-//             $("html, body").animate({
-//                     scrollTop: $(hash).offset().top,
-//                 },
-//                 1000,
-//                 function() {
-//                     window.location.hash = hash + 100;
-//                 }
-//             );
-//         }
-//     });
-//     $(".app__navigation a").on("click", function(event) {
-//         if (this.hash !== "") {
-//             event.preventDefault();
-
-//             var hash = this.hash;
-
-//             $("html, body").animate({
-//                     scrollTop: $(hash).offset().top,
-//                 },
-//                 1000,
-//                 function() {
-//                     window.location.hash = hash;
-//                 }
-//             );
-//         }
-//     });
-// });
-
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -230,7 +194,6 @@ marketBtn.addEventListener("click", (e) => {
 });
 
 // --------------------- Anime js ---------------------------------
-// pre-loader
 
 anime({
   targets: ".loader",
@@ -274,6 +237,17 @@ preLoad.add({
   delay: anime.stagger(1000),
 });
 
+
+
+preLoad.add(
+  {
+    targets: ".nameDiv",
+    translateX: ["-100%", "0"],
+    easing: "easeOutExpo",
+    delay: 1000,
+  },
+  "-=1000"
+);
 preLoad.add(
   {
     targets: ".app__navigation .navigation-dot",
@@ -283,19 +257,17 @@ preLoad.add(
   },
   "-=1000"
 );
-
 preLoad.add(
   {
-    targets: "#demo-svg path",
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: "easeInOutQuad",
-    duration: 3000,
-    delay: anime.stagger(2000),
-    direction: "alternate",
-    loop: true,
+    targets: ".nameDiv1 .content p",
+    translateY: ["-100%", "0"],
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    delay: anime.stagger(600),
   },
   "-=2000"
 );
+
 
 function myGreeting() {
   preLoad.play();
@@ -535,22 +507,12 @@ t4.add(
   {
     targets: ".contact-phone",
     opacity: [0, 1],
-    delay: anime.stagger(1000),
     easing: "easeOutBack",
     duration: 1800,
   },
   "-=1800"
 );
-t4.add(
-  {
-    targets: ".contact-email",
-    opacity: [0, 1],
-    delay: anime.stagger(1000),
-    easing: "easeOutBack",
-    duration: 1800,
-  },
-  "-=1800"
-);
+
 
 t4.add(
   {
@@ -565,17 +527,17 @@ t4.add(
 
 t4.add(
   {
-    targets: ".contact-form",
+    targets: ".contactNameDiv1",
     opacity: [0, 1],
     easing: "easeInOutBack",
-    translateX: ["100%", "0%"],
+    translateY: ["100%", "0%"],
     duration: 2000,
   },
   "-=3000"
 );
 t4.add(
   {
-    targets: ".contact-form div",
+    targets: ".contactNameDiv1 div",
     easing: "easeOutBack",
     opacity: [0, 1],
     delay: anime.stagger(500),
@@ -583,15 +545,7 @@ t4.add(
   },
   "-=1000"
 );
-t4.add(
-  {
-    targets: ".btn-submit",
-    easing: "easeOutBack",
-    opacity: [0, 1],
-    duration: 2000,
-  },
-  "-=1500"
-);
+
 
 t4.add(
   {
@@ -636,8 +590,8 @@ t4.add(
     targets: ".contact-logo svg path",
     easing: "easeInOutQuad",
     duration: 3000,
-    fill: "#363636",
-    opacity: "0.6",
+    fill: "#adadad",
+    opacity: "1",
     stroke: "#363636",
     delay: anime.stagger(3000),
     direction: "alternate",
@@ -646,62 +600,6 @@ t4.add(
   "-=4000"
 );
 
-let hireModalClose = anime({
-  targets: "#overlay",
-  easing: "linear",
-  translateX: ["0%", "200%"],
-  opacity: 0,
-  duration: 1000,
-  autoplay: false,
-});
-
-let hireModalOpen = anime({
-  targets: "#overlay",
-  easing: "linear",
-  translateX: ["200%", "0%"],
-  opacity: [0, 1],
-  duration: 100,
-  autoplay: false,
-});
-
-let successModalClose = anime({
-  targets: "#overlaySuccess",
-  easing: "linear",
-  translateX: ["0%", "200%"],
-  opacity: [1, 0],
-  duration: 100,
-  autoplay: false,
-});
-
-let successModalOpen = anime({
-  targets: "#overlaySuccess",
-  easing: "linear",
-  translateX: ["200%", "0%"],
-  opacity: [0, 1],
-  duration: 100,
-  autoplay: false,
-});
-
-function closeModal() {
-  successModalClose.play();
-}
-
-function check(message1) {
-  if (message1 == "OK") {
-    document.querySelector(".confirmMsg").innerHTML =
-      "Thank you for getting in touch!";
-    document.getElementById("overlaySuccess").style.border = "2px solid green";
-    hireModalClose.play();
-    document.getElementById("tagline").value = "";
-    document.getElementById("note").value = "";
-  } else {
-    document.querySelector(".confirmMsg").innerHTML =
-      "Something went wrong! Try Again";
-    document.getElementById("overlaySuccess").style.border = "2px solid red";
-  }
-  successModalOpen.play();
-  setTimeout(closeModal, 2000);
-}
 
 let visitedAbout = true;
 let visitedSkills = true;
@@ -723,15 +621,15 @@ document.querySelector(".marketBtn").addEventListener("click", () => {
   cardAnime.play();
 });
 
-document.querySelector(".about-hireMe").addEventListener("click", () => {
-  hireModalOpen.play();
-});
+// document.querySelector(".about-hireMe").addEventListener("click", () => {
+//   hireModalOpen.play();
+// });
 
-document.querySelector(".close-about").addEventListener("click", () => {
-  hireModalClose.play();
-  document.querySelector("#tagline").value = "";
-  document.querySelector("#note").value = "";
-});
+// document.querySelector(".close-about").addEventListener("click", () => {
+//   hireModalClose.play();
+//   document.querySelector("#tagline").value = "";
+//   document.querySelector("#note").value = "";
+// });
 
 document.querySelector("#about svg rect").addEventListener("mousemove", () => {
   if (clickedLogo) {
@@ -855,41 +753,3 @@ images.forEach((image) => {
   imgObserver.observe(image);
 });
 
-// 0A5933AFE2D7E0537108909D308F7ECBE29E
-
-// Smtp js
-// Mail Send Function
-function sendMail() {
-  try {
-    Email.send({
-      SecureToken: "b9409e6f-9fd5-47cd-b3ee-6f7c0ad00783",
-      To: "contactkishorework@gmail.com",
-      From: `${document.getElementById("email").value}`,
-      Subject: `Sender Name - ${document.getElementById("name").value}`,
-      Body: `${document.getElementById("message").value}`,
-    }).then((message) => {
-      check(message);
-    });
-  } catch {
-    alert("Error");
-  }
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("message").value = "";
-}
-
-function hireMail() {
-  try {
-    Email.send({
-      SecureToken: "b9409e6f-9fd5-47cd-b3ee-6f7c0ad00783",
-      To: "contactkishorework@gmail.com",
-      From: `${document.getElementById("tagline").value}`,
-      Subject: `Sender Name - Unknown`,
-      Body: `${document.getElementById("note").value}`,
-    }).then((message) => {
-      check(message);
-    });
-  } catch {
-    alert("hellssso");
-  }
-}
