@@ -747,6 +747,7 @@ nav {
                     justify-content: center;
                     align-items: flex-start;
                     flex-wrap: wrap;
+                    margin-bottom: 1rem;
                     gap: 2rem;
                     width: 100%;
                     .skills-img {
@@ -761,16 +762,22 @@ nav {
                 .skills-desc {
                     align-self: flex-start;
                     flex: 1;
-                    width: 80%;
+                    width: 90%;
                     display: flex;
                     border-left: 0px solid $peach;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: flex-start;
                     padding-left: 2rem;
                     margin-left: 1rem;
                     padding-top: 0.5rem;
                     flex-direction: column;
                     gap: 2rem;
+                    max-height: 22rem;
+                    flex-basis: 1;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    overscroll-behavior-y: contain;
+                    scroll-snap-type: y proximity;
                     .skills-year {
                         color: $halfWhite;
                         display: flex;
@@ -1874,6 +1881,7 @@ footer {
                         gap: 2rem;
                         justify-content: center;
                         align-items: flex-start;
+                        margin-bottom: 0rem;
                         width: 50%;
                         .skills-img {
                             width: 4rem;
