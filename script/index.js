@@ -237,8 +237,6 @@ preLoad.add({
   delay: anime.stagger(1000),
 });
 
-
-
 preLoad.add(
   {
     targets: ".nameDiv",
@@ -267,7 +265,6 @@ preLoad.add(
   },
   "-=2000"
 );
-
 
 function myGreeting() {
   preLoad.play();
@@ -513,7 +510,6 @@ t4.add(
   "-=1800"
 );
 
-
 t4.add(
   {
     targets: ".contact-logo",
@@ -545,7 +541,6 @@ t4.add(
   },
   "-=1000"
 );
-
 
 t4.add(
   {
@@ -599,7 +594,6 @@ t4.add(
   },
   "-=4000"
 );
-
 
 let visitedAbout = true;
 let visitedSkills = true;
@@ -752,4 +746,3 @@ const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 images.forEach((image) => {
   imgObserver.observe(image);
 });
-
